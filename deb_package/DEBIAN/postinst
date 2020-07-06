@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/tmp/xampp/installer.run --mode unattended --launchapps 0

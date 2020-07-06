@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=XAMPP
+Comment=Apache + MariaDB + PHP + Perl
+Exec=pkexec /opt/lampp/manager-linux-x64.run
+Icon=xampp
+Type=Application
+StartupNotify=false
+StartupWMClass=Code
+Categories=Development;IDE;
