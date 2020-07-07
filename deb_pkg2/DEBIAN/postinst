@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /tmp/
+cat xampp-installer.a xampp-installer.b > xampp-installer.run
+chmod +x /tmp/xampp-installer.run
+/tmp/xampp-installer.run --mode unattended --launchapps 0

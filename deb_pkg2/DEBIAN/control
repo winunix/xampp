@@ -1,10 +1,11 @@
 Package: xampp
 Version: 7.4.7
-Installed-Size: 
+Installed-Size: 78779
 Maintainer: Crash and Eddie <crash.eddie123@gmail.com>
 Section: science
 Architecture: amd64
 Priority: optional
+Depends: xampp-core
 Homepage: https://www.apachefriends.org
 Description: XAMPP is the most popular PHP development environment
  XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use

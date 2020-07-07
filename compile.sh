@@ -1,9 +1,13 @@
 #!/bin/bash
 
-if [ ! -f deb_package/tmp/xampp/installer.run ]; then
-    wget https://www.apachefriends.org/xampp-files/7.4.7/xampp-linux-x64-7.4.7-0-installer.run -O installer.run
-    mv installer.run deb_package/tmp/xampp/
+if [ ! -f xampp-installer.run ]; then
+    wget https://www.apachefriends.org/xampp-files/7.4.7/xampp-linux-x64-7.4.7-0-installer.run -O xampp-installer.run
+    split -b 77M -a 1 xampp-installer.run "xampp-installer."
+    mkdir -p deb_pkg1/tmp/
+    mv xampp-installer.a deb_pkg1/tmp/
+    mkdir -p deb_pkg2/tmp/
+    mv xampp-installer.b deb_pkg2/tmp/
 fi
-chmod +x deb_package/tmp/xampp/installer.run
 
-dpkg-deb -b deb_package .
+dpkg-deb -b deb_pkg1 .
+dpkg-deb -b deb_pkg2 .
